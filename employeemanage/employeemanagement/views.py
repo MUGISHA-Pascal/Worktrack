@@ -41,5 +41,7 @@ def profile(request):
     return render(request,"profile.html")
 def search(request):
     return render(request,"search.html")
+def manageemployees(request):
+    return render(request,"manageemployees.html")
 
         
