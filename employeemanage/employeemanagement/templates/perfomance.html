@@ -19,12 +19,13 @@
             <h1>MP employee management</h1>
         </div>
         <div class="links">
-            <a href="#" class="e">Employees</a>
-            <a href="#" class="t">training records</a>
-            <a href="#" class="p">Perfomance records</a>
-            <a href="#" class="sea"></a>
-            <img src="profile-user.png" class="icon">
-            <a href="#" class="f">Profile</a>
+            <a href="{% url 'employeemanagement:home'%}" class="e">Employees</a>
+            <a href="{% url 'employeemanagement:manageemployees'%}" class="p">Manage employees</a>
+            <a href="{% url 'employeemanagement:trainingrecords'%}" class="t">training records</a>
+            <a href="{% url 'employeemanagement:perfomance'%}" class="p">Perfomance records</a>           
+            <a href="{% url 'employeemanagement:search'%}" class="sea">Search</a>
+            <img src="{% static 'profile-user.png' %}" class="icon">
+            <a href="{% url 'employeemanagement:profile'%}" class="f">Profile</a>
         </div>
     </div>
     <div class="body">

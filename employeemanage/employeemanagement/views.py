@@ -41,7 +41,19 @@ def perfomance(request):
 def profile(request):
     return render(request,"profile.html")
 def search(request):
-    return render(request,"search.html")
+    if request.method == "GET":
+        employeename=request.GET.get("employeename")
+        departmentname=request.GET.get("departmentname")
+        if departmentname == "department 1":
+            mdl=department1.objects.filter(employeename=employeename)
+        elif departmentname == "department 2":
+            mdl=department2.objects.filter(employeename=employeename)
+        elif departmentname == "department 3":
+            mdl=department3.objects.filter(employeename=employeename)
+        else:
+            return render(request,"search.html")
+            
+    return render(request,"search.html",{"mdl":mdl})
 class manageemployees(View):
     def get(self,request):
         if request.method == "GET":
