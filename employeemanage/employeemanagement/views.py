@@ -44,23 +44,23 @@ def search(request):
     return render(request,"search.html")
 class manageemployees(View):
     def get(self,request):
-        # if request.method == "GET":
-        #     employeename=request.GET["employeename"]
-        #     departmentname=request.GET["departmentname"]
-        #     if departmentname == "department 1":
-        #         mdl=department1.objects.filter(employeename=employeename)
-        #         mdl.delete()
-        #     elif departmentname == "department 1":
-        #         mdl=department1.objects.filter(employeename=employeename)
-        #         mdl.delete()
-        #     elif departmentname == "department 1":
-        #         mdl=department1.objects.filter(employeename=employeename)
-        #         mdl.delete()
-        #     elif departmentname == "department 1":
-        #         mdl=department1.objects.filter(employeename=employeename)
-        #         mdl.delete()
-        #     else:
-        #         return render(request,"manageemployees.html")
+        if request.method == "GET":
+            employeename=request.GET.get("employeename")
+            departmentname=request.GET.get("departmentname")
+            if departmentname == "department 1":
+                mdl=department1.objects.filter(employeename=employeename)
+                mdl.delete()
+            elif departmentname == "department 1":
+                mdl=department1.objects.filter(employeename=employeename)
+                mdl.delete()
+            elif departmentname == "department 1":
+                mdl=department1.objects.filter(employeename=employeename)
+                mdl.delete()
+            elif departmentname == "department 1":
+                mdl=department1.objects.filter(employeename=employeename)
+                mdl.delete()
+            else:
+                return render(request,"manageemployees.html")
         return render(request,"manageemployees.html")      
     def post(self,request): 
         if request.method == "POST":     
