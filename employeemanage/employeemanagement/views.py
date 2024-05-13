@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from .models import signupdatabase
+from .models import *
 from django.http import HttpResponseRedirect
+from .forms import *
 
 def signupview(request):
     if request.method == "POST" :
@@ -23,7 +24,11 @@ def loginview(request):
         else : return render(request,"login.html")
     return render(request,"login.html")
 def homeview(request):
-    return render(request,"employees.html")
+    d1form=department1.objects.all()
+    filter={
+        "d1form":d1form
+    }
+    return render(request,"employees.html",filter)
 def trainingrecords(request):
     return render(request,"trainingrecords.html")
 def perfomance(request):
@@ -32,5 +37,5 @@ def profile(request):
     return render(request,"profile.html")
 def search(request):
     return render(request,"search.html")
-          
+
         

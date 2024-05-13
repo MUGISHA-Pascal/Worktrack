@@ -7,4 +7,5 @@ class signupdatabase(models.Model):
     code=models.CharField(max_length=128)
     
 class department1(models.Model):
-    name=
+    employeename=models.CharField(max_length=128)
+    
