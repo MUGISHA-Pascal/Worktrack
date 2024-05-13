@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import *
 from django.http import HttpResponseRedirect
 from .forms import *
+from django.views import View
 
 def signupview(request):
     if request.method == "POST" :
@@ -41,7 +42,42 @@ def profile(request):
     return render(request,"profile.html")
 def search(request):
     return render(request,"search.html")
-def manageemployees(request):
-    return render(request,"manageemployees.html")
+class manageemployees(View):
+    def get(self,request):
+        # if request.method == "GET":
+        #     employeename=request.GET["employeename"]
+        #     departmentname=request.GET["departmentname"]
+        #     if departmentname == "department 1":
+        #         mdl=department1.objects.filter(employeename=employeename)
+        #         mdl.delete()
+        #     elif departmentname == "department 1":
+        #         mdl=department1.objects.filter(employeename=employeename)
+        #         mdl.delete()
+        #     elif departmentname == "department 1":
+        #         mdl=department1.objects.filter(employeename=employeename)
+        #         mdl.delete()
+        #     elif departmentname == "department 1":
+        #         mdl=department1.objects.filter(employeename=employeename)
+        #         mdl.delete()
+        #     else:
+        #         return render(request,"manageemployees.html")
+        return render(request,"manageemployees.html")      
+    def post(self,request): 
+        if request.method == "POST":     
+            employeename=request.POST["employeename"]
+            departmentname=request.POST["departmentname"]
+            if departmentname == "department 1":
+                dp1=department1(employeename=employeename)
+                dp1.save() 
+            elif departmentname == "department 2":
+                dp1=department2(employeename=employeename)
+                dp1.save()   
+            if departmentname == "department 3":
+                dp1=department3(employeename=employeename)
+                dp1.save()   
+            else:
+                return render(request,"manageemployees.html")
+        return render(request,"manageemployees.html")
 
-        
+                
+                

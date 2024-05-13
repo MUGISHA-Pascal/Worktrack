@@ -30,28 +30,33 @@
     </div>
     <div class="body">
       <div class="box1">
+        <form method="POST">
+          {% csrf_token %}
         <div><p class="ds">Add employee</p></div>
         <div>
           <div>
             <p class="hn">employee name :</p>
-            <input type="text" class="in" /><br /><br />
+            <input type="text" class="in" name="employeename"/><br /><br />
             <p class="hn2">departname name :</p>
-            <input type="text" class="in2" />
+            <input type="text" class="in2" name="departmentname"/>
           </div>
           <div><input type="submit" value="Add employee" class="button" /></div>
+        </form>
         </div>
       </div>
-      <div class="box2">
+      {% comment %} <div class="box2">
+        <form method="POST">
         <div><p class="ds">Remove employee</p></div>
 
         <div>
           <p class="hn">employee name :</p>
-          <input type="text" class="in" /><br /><br />
+          <input type="text" class="in" name="employeenamee"/><br /><br />
           <p class="hn2">departname name :</p>
-          <input type="text" class="in2" />
+          <input type="text" class="in2" name="departmentnamee"/>
         </div>
         <div><input type="submit" value="Remove employee" class="button"/></div>
-      </div>
+      </form>
+      </div> {% endcomment %}
     </div>
     <div class="footer">
       <div class="copyright">
