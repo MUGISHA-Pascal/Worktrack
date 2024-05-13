@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'search.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="topmenu">
+        <div class="title">
+            <h1>MP employee management</h1>
+        </div>
+        <div class="links">
+            <a href="#" class="e">Employees</a>
+            <a href="#" class="t">training records</a>
+            <a href="#" class="p">Perfomance records</a>
+            <a href="#" class="sea">Search</a>
+            <img src="profile-user.png" class="icon">
+            <a href="#" class="f">Profile</a>
+        </div>
+    </div>
+    <div class="body">
+        <div class="gh">
+            <p>Enter the department name :</p>
+            <input type="text" class="bix">
+        </div>
+        <div class="gh">
+            <p>Enter the employee name :</p>
+            <input type="text" class="bix">
+        </div>
+        <input type="submit" value="search employee" class="submit">
+    </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <p>you are in the right place to manage employees</p>
+            <p class="mp">@ mp employee management</p>
+            <div class="icy">
+                <p>© 2024 mp employment information by Pascal. All rights reserved</p>
+                <p class="sm">terms of sale</p>
+                <p class="sm">privacy policy</p>
+            </div>
+        </div>
+        <div class="contact">
+            <p class="cont">Contact Us:</p>
+            <p>for general inquires only</p>
+            <p>tel: 0786493844</p>
+            <p>email: mugishapascal2008@gmail.com</p>
+        </div>
+    </div>
+</body>
+
+</html>

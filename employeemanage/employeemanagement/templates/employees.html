@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employees</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'employees.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="topmenu">
+        <div class="title">
+            <h1>MP employee management</h1>
+        </div>
+        <div class="links">
+            <a href="#" class="e">Employees</a>
+            <a href="{% url 'employeemanagement:trainingrecords' %}" class="t">training records</a>
+            <a href="{% url 'employeemanagement:perfomance' %}" class="p">Perfomance records</a>
+            <a href="{% url 'employeemanagement:search' %}" class="sea">Search</a>
+            <img src="{% static 'profile-user.png' %}" class="icon">
+            <a href="{% url 'employeemanagement:profile' %}" class="f">Profile</a>
+        </div>
+    </div>
+    <div class="body">
+        <div class="dep1">
+            <img src="{% static 'hierarchical-structure.png'%}" class="iconi">
+            <p>department 1 </p>
+            <div class="ieh">
+                <p class="em">Employees</p>
+                <select>
+                    <option value="option1">option1</option>
+                    <option value="option2">option2</option>
+                </select>
+            </div>
+        </div>
+        <div class="dep1">
+            <img src="{% static 'hierarchical-structure.png'%}" class="iconi">
+            <p>department 2</p>
+            <div class="ieh">
+                <p class="em">Employees</p>
+            </div>
+        </div>
+        <div class="dep1">
+            <img src="{% static 'hierarchical-structure.png'%}" class="iconi">
+            <p>department 3 </p>
+            <div class="ieh">
+                <p class="em">Employees</p>
+            </div>
+        </div>
+        <div class="sbm">
+<input type="submit" value="add departmet" class="submit">
+        </div>
+        
+    </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <p>you are in the right place to manage employees</p>
+            <p class="mp">@ mp employee management</p>
+            <div class="icy">
+                <p>© 2024 mp employment information by Pascal. All rights reserved</p>
+                <p class="sm">terms of sale</p>
+                <p class="sm">privacy policy</p>
+            </div>
+        </div>
+        <div class="contact">
+            <p class="cont">Contact Us:</p>
+            <p>for general inquires only</p>
+            <p>tel: 0786493844</p>
+            <p>email: mugishapascal2008@gmail.com</p>
+        </div>
+    </div>
+</body>
+
+</html>
