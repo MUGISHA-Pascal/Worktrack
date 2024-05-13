@@ -49,6 +49,14 @@
             <p>department 2</p>
             <div class="ieh">
                 <p class="em">Employees</p>
+                <select>
+                    <option>employees</option>
+                {% for dt in d1form2%}
+               
+                    <option value="{{dt.id}}">{{dt.employeename}}</option>
+               
+                {% endfor %}         
+            </select>
             </div>
         </div>
         <div class="dep1">
@@ -56,6 +64,14 @@
             <p>department 3 </p>
             <div class="ieh">
                 <p class="em">Employees</p>
+                <select>
+                    <option>employees</option>
+                {% for dt in d1form3%}
+               
+                    <option value="{{dt.id}}">{{dt.employeename}}</option>
+               
+                {% endfor %}         
+            </select>
             </div>
         </div>
         <div class="sbm">

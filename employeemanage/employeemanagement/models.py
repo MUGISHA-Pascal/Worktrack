@@ -9,3 +9,8 @@ class signupdatabase(models.Model):
 class department1(models.Model):
     employeename=models.CharField(max_length=128)
     
+class department2(models.Model):
+    employeename=models.CharField(max_length=128)
+    
+class department3(models.Model):
+    employeename=models.CharField(max_length=128)

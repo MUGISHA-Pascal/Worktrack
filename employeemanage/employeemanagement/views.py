@@ -25,8 +25,12 @@ def loginview(request):
     return render(request,"login.html")
 def homeview(request):
     d1form=department1.objects.all()
+    d1form2=department2.objects.all()
+    d1form3=department3.objects.all()
     filter={
-        "d1form":d1form
+        "d1form":d1form,
+        "d1form2":d1form2,
+        "d1form3":d1form3
     }
     return render(request,"employees.html",filter)
 def trainingrecords(request):
