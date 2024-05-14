@@ -87,6 +87,16 @@ class manageemployees(View):
             else:
                 return render(request,"manageemployees.html")
         return render(request,"manageemployees.html")
-
+def changeprofile(request):
+    if request.method == "POST":
+        form=profileformi(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+            return render(request,"profile.html",{"form":form})
+    else:
+        form=profileformi()
+    return render(request,"profile.html",{"form":form})
+    
+        
                 
                 
