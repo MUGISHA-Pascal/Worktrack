@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>training records</title>
     {%load static%}
-    <link rel="stylesheet" href="{% static 'manageperfomance.css'%}" />
+    <link rel="stylesheet" href="{% static 'managetraining.css'%}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,28 +32,28 @@
       <div class="box1">
         <form method="POST">
           {% csrf_token %}
-        <div><p class="ds">Add perfomance record</p></div>
+        <div><p class="ds">Add training record</p></div>
         <div>
           <div>
-            <p class="hn">Perfomance percentage :</p>
-            <input type="text" class="in" name="perfomance"/><br /><br />
+            <p class="hn">Training percentage :</p>
+            <input type="text" class="in" name="training"/><br /><br />
             <p class="hn2">Training date :</p>
-            <input type="date" class="in2" name="perfomancedate"/>
+            <input type="date" class="in2" name="trainingdate"/>
           </div>
-          <div><input type="submit" value="Add perfomance record" class="button" /></div>
+          <div><input type="submit" value="Add training record" class="button" /></div>
         </form>
         </div>
       </div>
     <div class="box2">
         <form method="GET">
-        <div><p class="ds">Remove perfomance record</p></div>
+        <div><p class="ds">Remove training record</p></div>
         <div>
-          <p class="hn">perfomance percentage :</p>
-          <input type="text" class="in" name="perfomance"/><br /><br />
-          <p class="hn2">perfomance date :</p>
-          <input type="date" class="in2" name="perfomancedate"/>
+          <p class="hn">Training percentage :</p>
+          <input type="text" class="in" name="training"/><br /><br />
+          <p class="hn2">Training date :</p>
+          <input type="date" class="in2" name="trainingdate"/>
         </div>
-        <div><input type="submit" value="Remove perfomance record" class="button"/></div>
+        <div><input type="submit" value="Remove training record" class="button"/></div>
       </form>
       </div> 
     </div>
