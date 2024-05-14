@@ -44,23 +44,19 @@
             <p>date</p>
             <p>training records in all aspects(%)</p>
         </div>
+        {% for dt in modl%}
         <div class="o">
-            <p>23/7/2024</p>
-            <p>70%</p>
+            <p>{{dt.trainingdate}}</p>
+            <p>{{dt.training}}</p>
         </div>
-        <div class="o">
-            <p>23/7/2024</p>
-            <p>70%</p>
-        </div>
-        <div class="o">
-            <p>23/7/2024</p>
-            <p>70%</p>
-        </div>
+        {% endfor %}
+   
         <div class="ot">
           
         </div>
         </div>
     </div>
+    <a href="{% url 'employeemanagement:managetraining'%}" class="mh">Manage training</a>
     </div>
     <div class="footer">
         <div class="copyright">

@@ -35,7 +35,8 @@ def homeview(request):
     }
     return render(request,"employees.html",filter)
 def trainingrecords(request):
-    return render(request,"trainingrecords.html")
+    modl=trainingdb.objects.all()
+    return render(request,"trainingrecords.html",{"modl":modl})
 def perfomance(request):
     modl=perfomancedb.objects.all()
     return render(request,"perfomance.html",{"modl":modl})
@@ -105,7 +106,23 @@ class manageperfomance(View):
             if modl is not None:
                 modl.save()
         return render(request,"manageperfomance.html")
-
+class managetraining(View):
+    def get(self,request):
+        if request.method == "GET":
+            training=request.GET.get("training")
+            trainingdate=request.GET.get("trainingdate")
+            modl=trainingdb.objects.filter(training=training,trainingdate=trainingdate)
+            if modl is not None:
+                modl.delete()
+        return render(request,"managetraining.html")
+    def post(self,request): 
+        if request.method == "POST":     
+            training=request.POST["training"]
+            trainingdate=request.POST["trainingdate"]
+            modl=trainingdb(training=training,trainingdate=trainingdate)
+            if modl is not None:
+                modl.save()
+        return render(request,"managetraining.html")
     
         
                 

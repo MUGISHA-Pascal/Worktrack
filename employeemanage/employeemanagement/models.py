@@ -18,3 +18,7 @@ class department3(models.Model):
 class perfomancedb(models.Model):
     perfomance=models.CharField(max_length=128)
     perfomancedate=models.DateField()
+
+class trainingdb(models.Model):
+    training=models.CharField(max_length=128)
+    trainingdate=models.DateField()
