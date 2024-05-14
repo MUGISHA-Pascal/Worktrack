@@ -62,14 +62,11 @@ class manageemployees(View):
             if departmentname == "department 1":
                 mdl=department1.objects.filter(employeename=employeename)
                 mdl.delete()
-            elif departmentname == "department 1":
-                mdl=department1.objects.filter(employeename=employeename)
+            elif departmentname == "department 2":
+                mdl=department2.objects.filter(employeename=employeename)
                 mdl.delete()
-            elif departmentname == "department 1":
-                mdl=department1.objects.filter(employeename=employeename)
-                mdl.delete()
-            elif departmentname == "department 1":
-                mdl=department1.objects.filter(employeename=employeename)
+            elif departmentname == "department 3":
+                mdl=department3.objects.filter(employeename=employeename)
                 mdl.delete()
             else:
                 return render(request,"manageemployees.html")
