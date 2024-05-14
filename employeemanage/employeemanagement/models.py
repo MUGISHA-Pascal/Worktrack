@@ -15,3 +15,6 @@ class department2(models.Model):
 class department3(models.Model):
     employeename=models.CharField(max_length=128)
     
+class perfomancedb(models.Model):
+    perfomance=models.CharField(max_length=128)
+    perfomancedate=models.DateField()

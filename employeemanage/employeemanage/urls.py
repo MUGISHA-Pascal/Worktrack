@@ -26,5 +26,6 @@ urlpatterns = [
     path("employeemanagement/profile",include("employeemanagement.urls")),
     path("employeemanagement/changeprofile",include("employeemanagement.urls")),
     path("employeemanagement/search",include("employeemanagement.urls")),
-    path("employeemanagement/manageemployees",include("employeemanagement.urls"))
+    path("employeemanagement/manageemployees",include("employeemanagement.urls")),
+    path("employeemanagement/manageperfomance",include("employeemanagement.urls"))
 ]

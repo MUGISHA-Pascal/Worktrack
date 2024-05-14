@@ -43,23 +43,18 @@
             <p>date</p>
             <p>perfomance records in all aspects(%)</p>
         </div>
+        {% for dt in modl%}
         <div class="o">
-            <p>23/7/2024</p>
-            <p>70%</p>
+            <p>{{dt.perfomancedate}}</p>
+            <p>{{dt.perfomance}}</p>
         </div>
-        <div class="o">
-            <p>23/7/2024</p>
-            <p>70%</p>
-        </div>
-        <div class="o">
-            <p>23/7/2024</p>
-            <p>70%</p>
-        </div>
+        {% endfor %}
         <div class="ot">
           
         </div>
         </div>
-    </div>
+     <a href="{% url 'employeemanagement:manageperfomance'%}">Manage perfomance records</a>
+   </div>
     </div>
     <div class="footer">
         <div class="copyright">

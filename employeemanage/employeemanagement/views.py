@@ -37,7 +37,8 @@ def homeview(request):
 def trainingrecords(request):
     return render(request,"trainingrecords.html")
 def perfomance(request):
-    return render(request,"perfomance.html")
+    modl=perfomancedb.objects.all()
+    return render(request,"perfomance.html",{"modl":modl})
 def profile(request):
     return render(request,"profile.html")
 def search(request):
@@ -87,15 +88,24 @@ class manageemployees(View):
             else:
                 return render(request,"manageemployees.html")
         return render(request,"manageemployees.html")
-def changeprofile(request):
-    if request.method == "POST":
-        form=profileformi(request.POST,request.FILES)
-        if form.is_valid():
-            form.save()
-            return render(request,"profile.html",{"form":form})
-    else:
-        form=profileformi()
-    return render(request,"profile.html",{"form":form})
+class manageperfomance(View):
+    def get(self,request):
+        if request.method == "GET":
+            perfomance=request.GET.get("perfomance")
+            perfomancedate=request.GET.get("perfomancedate")
+            modl=perfomancedb.objects.filter(perfomance=perfomance,perfomancedate=perfomancedate)
+            if modl is not None:
+                modl.delete()
+        return render(request,"manageperfomance.html")
+    def post(self,request): 
+        if request.method == "POST":     
+            perfomance=request.POST["perfomance"]
+            perfomancedate=request.POST["perfomancedate"]
+            modl=perfomancedb(perfomance=perfomance,perfomancedate=perfomancedate)
+            if modl is not None:
+                modl.save()
+        return render(request,"manageperfomance.html")
+
     
         
                 
