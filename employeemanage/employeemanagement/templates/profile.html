@@ -24,7 +24,7 @@
             <a href="{% url 'employeemanagement:manageemployees'%}" class="e">Manage employees</a>
             <a href="{% url 'employeemanagement:trainingrecords'%}" class="t">training records</a>
             <a href="{% url 'employeemanagement:perfomance'%}" class="p">Perfomance records</a>
-            <a href="#" class="sea"></a>
+            <a href="{% url 'employeemanagement:search'%}" class="sea">Search</a>
             <img src="{% static 'profile-user.png' %}" class="icon">
             <a href="{% url 'employeemanagement:profile'%}" class="f">Profile</a>
         </div>
