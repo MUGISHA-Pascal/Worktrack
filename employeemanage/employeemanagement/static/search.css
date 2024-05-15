@@ -58,11 +58,12 @@ a:hover{
     padding:30px;
     margin-top:200px;
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     justify-content: center;
     align-items: center;
 vertical-align: middle;
 height:200px;
+gap:30px;
 }
 .tr{
     background-color:white;

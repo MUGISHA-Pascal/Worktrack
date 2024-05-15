@@ -61,11 +61,11 @@ def search(request):
         employeename=request.GET.get("employeename")
         departmentname=request.GET.get("departmentname")
         if departmentname == "department 1":
-            mdl=department1.objects.filter(employeename=employeename)
+            mdl=department1.objects.filter(employeename=employeename).values()
         elif departmentname == "department 2":
-            mdl=department2.objects.filter(employeename=employeename)
+            mdl=department2.objects.filter(employeename=employeename).values()
         elif departmentname == "department 3":
-            mdl=department3.objects.filter(employeename=employeename)
+            mdl=department3.objects.filter(employeename=employeename).values()
         else:
             return render(request,"search.html")
             

@@ -29,21 +29,24 @@
         </div>
     </div>
     <div class="body">
+<div class="sear">
     <form method="GET">
         <div class="gh">
             <p>Enter the department name :</p>
-            <input type="text" class="bix">
+            <input type="text" class="bix" name="departmentname">
         </div>
         <div class="gh">
             <p>Enter the employee name :</p>
-            <input type="text" class="bix">
+            <input type="text" class="bix" name="employeename">
         </div>
         <input type="submit" value="search employee" class="submit">
     </div>
-</form>
+    </form>
+    <div class="res">
     {%for dt in mdl%}
-    <p>{{dt.employeename}}</p>
+    <p>{{dt.employeename.values}}</p>
     {% endfor %}
+    </div>
     </div>
     <div class="footer">
         <div class="copyright">
