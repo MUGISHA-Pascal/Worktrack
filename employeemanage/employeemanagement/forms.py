@@ -8,5 +8,11 @@ class signupform(ModelForm):
 class department1form(ModelForm):
     class Meta:
         model=department1
-        fields="__all__"    
+        fields="__all__"  
+    
+class imageform(ModelForm):
+    class Meta:
+        model=imagedb
+        fields="__all__"
+        
     

@@ -29,8 +29,17 @@
             <a href="{% url 'employeemanagement:profile'%}" class="f">Profile</a>
         </div>
     </div>
-    <div class="body">
-        <div class="bc"></div>
+    <div class="body">        
+        <div class="bc">
+
+        {% comment %} {%for dt in filt.form%}
+        <img src="{{dt.image.url}}">
+        <a href="{{dt.image.url}}">{{dt.image.name}}</a>
+        {% endfor %} {% endcomment %}
+        {% comment %} <a href="{{filt.form.image.url}}">{{filt.form.image.name}}</a> {% endcomment %}
+        <img src="{{filt.form.image.url}}" class="bc"/>
+
+        </div>      
         <p>name : mugisha pascal</p>
         <p>position : Employee manager</p>
         <p>email: mugishapascal2008@gmail.com</p>

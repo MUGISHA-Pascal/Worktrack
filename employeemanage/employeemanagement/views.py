@@ -41,7 +41,11 @@ def perfomance(request):
     modl=perfomancedb.objects.all()
     return render(request,"perfomance.html",{"modl":modl})
 def profile(request):
-    return render(request,"profile.html")
+    form=imagedb.objects.filter().last()
+    filt={
+        "form":form
+    }
+    return render(request,"profile.html",{"filt":filt})
 def search(request):
     if request.method == "GET":
         employeename=request.GET.get("employeename")
@@ -123,6 +127,15 @@ class managetraining(View):
             if modl is not None:
                 modl.save()
         return render(request,"managetraining.html")
+def changeprofile(request):
+    if request.method == "POST":
+        form=imageform(request.POST,request.FILES)
+        if form.is_valid:
+            form.save()
+    else:
+        form=imageform()
+    return render(request,"changeprofile.html",{"form":form})
+
     
         
                 

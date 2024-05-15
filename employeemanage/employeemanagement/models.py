@@ -22,3 +22,6 @@ class perfomancedb(models.Model):
 class trainingdb(models.Model):
     training=models.CharField(max_length=128)
     trainingdate=models.DateField()
+    
+class imagedb(models.Model):
+    image=models.ImageField(upload_to='photos/', blank=True, null=True)
