@@ -19,6 +19,8 @@ def loginview(request):
     if request.method == "POST":
         name=request.POST["name"]
         password=request.POST['password']
+        if name == "" and password == "":
+            return render(request,"login.html")            
         md=bool(any(signupdatabase.objects.filter(password=password)))
         if md :
             return HttpResponseRedirect("home")
