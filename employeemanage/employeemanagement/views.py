@@ -44,7 +44,12 @@ def trainingrecords(request):
     return render(request,"trainingrecords.html",{"filt":filt})
 def perfomance(request):
     modl=perfomancedb.objects.all()
-    return render(request,"perfomance.html",{"modl":modl})
+    form=imagedb.objects.filter().last()
+    filt={
+        "modl":modl,
+        "form":form
+    }
+    return render(request,"perfomance.html",{"filt":filt})
 def profile(request):
     form=imagedb.objects.filter().last()
     filt={
