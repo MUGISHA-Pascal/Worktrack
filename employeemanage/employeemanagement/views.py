@@ -39,23 +39,29 @@ def homeview(request):
 def trainingrecords(request):
     modl=trainingdb.objects.all()
     form=imagedb.objects.filter().last()
+    info=signupdatabase.objects.filter().last()
     filt={
         "form":form,
-        "modl":modl
+        "modl":modl,
+        "info":info
     }
     return render(request,"trainingrecords.html",{"filt":filt})
 def perfomance(request):
     modl=perfomancedb.objects.all()
     form=imagedb.objects.filter().last()
+    info=signupdatabase.objects.filter().last()
     filt={
         "modl":modl,
-        "form":form
+        "form":form,
+        "info":info
     }
     return render(request,"perfomance.html",{"filt":filt})
 def profile(request):
     form=imagedb.objects.filter().last()
+    info=signupdatabase.objects.filter().last()
     filt={
-        "form":form
+        "form":form,
+        "info":info
     }
     return render(request,"profile.html",{"filt":filt})
 def search(request):

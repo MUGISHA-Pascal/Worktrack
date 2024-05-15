@@ -40,10 +40,10 @@
         <img src="{{filt.form.image.url}}" class="bc"/>
 
         </div>      
-        <p>name : mugisha pascal</p>
-        <p>position : Employee manager</p>
-        <p>email: mugishapascal2008@gmail.com</p>
-        <p>tel: 0786493844</p>
+        <p>name : {{filt.info.name}}</p>
+        <p>email : {{filt.info.email}}</p>
+        <p>code: {{filt.info.code}}</p>
+       
         <div class="v">
             <a href="{% url 'employeemanagement:login'%}" class="er">logout</a>
             <a href="{% url 'employeemanagement:changeprofile'%}" class="er">change profile</a>

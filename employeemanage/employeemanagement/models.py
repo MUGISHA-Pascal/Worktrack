@@ -6,7 +6,7 @@ class signupdatabase(models.Model):
     password=models.CharField(max_length=128,unique=True,primary_key=True)
     code=models.CharField(max_length=128)
     
-class department1(models.Model):
+class department1 (models.Model):
     employeename=models.CharField(max_length=128)
     
 class department2(models.Model):
@@ -24,4 +24,4 @@ class trainingdb(models.Model):
     trainingdate=models.DateField()
     
 class imagedb(models.Model):
-    image=models.ImageField(upload_to='photos/', blank=True, null=True)
+    image=models.ImageField(upload_to='photos/', blank=True, null=True)  
