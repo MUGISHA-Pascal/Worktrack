@@ -15,4 +15,4 @@ urlpatterns = [
     path("manageperfomance",views.manageperfomance.as_view(),name="manageperfomance"),
     path("managetraining",views.managetraining.as_view(),name="managetraining"),
     path("changeprofile",views.changeprofile,name="changeprofile")
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

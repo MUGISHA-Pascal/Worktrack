@@ -36,7 +36,12 @@ def homeview(request):
     return render(request,"employees.html",filter)
 def trainingrecords(request):
     modl=trainingdb.objects.all()
-    return render(request,"trainingrecords.html",{"modl":modl})
+    form=imagedb.objects.filter().last()
+    filt={
+        "form":form,
+        "modl":modl
+    }
+    return render(request,"trainingrecords.html",{"filt":filt})
 def perfomance(request):
     modl=perfomancedb.objects.all()
     return render(request,"perfomance.html",{"modl":modl})

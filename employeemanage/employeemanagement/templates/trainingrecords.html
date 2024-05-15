@@ -31,7 +31,9 @@
     </div>
     <div class="body">
         <div class="tr">
-            <div class="c"></div>
+            <div class="c">
+                <img src="{{filt.form.image.url}}" class="c"/>
+            </div>
             <div class="nd">
                 <p class="n">Mugisha Pascal</p>
             </div>
@@ -44,7 +46,7 @@
             <p>date</p>
             <p>training records in all aspects(%)</p>
         </div>
-        {% for dt in modl%}
+        {% for dt in filt.modl%}
         <div class="o">
             <p>{{dt.trainingdate}}</p>
             <p>{{dt.training}}</p>
